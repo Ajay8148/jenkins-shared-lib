@@ -6,6 +6,6 @@ def call(String imageName, String containerName) {
     sh "docker rm -f ${containerName} || true"
 
     echo "Running new container"
-    sh "docker run -d -p 8080:80 --name ${containerName} ${imageName}"
+    sh "docker run -d -p 8083:80 --name ${containerName} ${imageName}"
 }
 
